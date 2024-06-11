@@ -37,10 +37,8 @@ begin
 
 end logic;
 
---force ck 0 0, 1 1 -repeat 2
---force clr 0 0 
---force sa 0 0, 1 4, 0 6
---force sv 0 0, 1 10, 0 12
+
+
 
 
 

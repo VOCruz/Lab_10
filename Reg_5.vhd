@@ -26,8 +26,8 @@ begin
    F4 : FF_D port map(ck, rst, set, t(4), s(4));
    F3 : FF_D port map(ck, rst, set, t(3), s(3));
    F2 : FF_D port map(ck, clr, rst, t(2), s(2));
-   F1 : FF_D port map(ck, rst, set, t(1), s(1));
-   F0 : FF_D port map(ck, clr, rst, t(0), s(0));
+   F1 : FF_D port map(ck, clr, rst, t(1), s(1));
+   F0 : FF_D port map(ck, rst, set, t(0), s(0));
 
 end logic;
 

@@ -1,14 +1,14 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity Reg_20 is
+entity C_Reg_20 is
    port(ck, reset : in  std_logic;
                 t : in  std_logic_vector(4 downto 0);
                 s : out std_logic_vector(4 downto 0)
    );
-end Reg_20;
+end C_Reg_20;
 
-architecture logic of Reg_20 is
+architecture logic of C_Reg_20 is
 
    component FF_D is
       port(ck, clr, set, d :  in std_logic;
@@ -27,9 +27,10 @@ begin
    F3 : FF_D port map(ck, rst, set, t(3), s(3));
    F2 : FF_D port map(ck, clr, rst, t(2), s(2));
    F1 : FF_D port map(ck, rst, set, t(1), s(1));
-   F0 : FF_D port map(ck, clr, rst, t(0), s(0));
+   F0 : FF_D port map(ck, rst, set, t(0), s(0));
 
 end logic;
+
 
 
 

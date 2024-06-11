@@ -26,15 +26,17 @@ architecture logic of Lab_10 is
             ck_out: out std_logic);
    end component;
 
-   signal clock, sa_aux, sv_aux, pa_aux, pv_aux : std_logic;
+   signal clock, n_clr, sa_aux, sv_aux, pa_aux, pv_aux : std_logic;
 
 begin
 
+   n_clr <= clr;
+
    --C_D : ck_div port map(ck, clock);
 
-   C : Coracao port map(ck, clr, SW0, SW1, pa_aux, pv_aux, sa_aux, sv_aux, lsa, lsv, lpa, lpv);
+   C : Coracao port map(ck, n_clr, SW0, SW1, pa_aux, pv_aux, sa_aux, sv_aux, lsa, lsv, lpa, lpv);
 
-   M : Marcapasso port map(ck, clr, sa_aux, sv_aux, pa_aux, pv_aux);
+   M : Marcapasso port map(ck, n_clr, sa_aux, sv_aux, pa_aux, pv_aux);
 
 end logic;
 
