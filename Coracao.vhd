@@ -38,7 +38,7 @@ architecture logic of Coracao is
 
 begin
 
-   MDE : mde_coracao port map(ck, clr, SW0, SW1, pa, pa, s_Ta, s_Tv, q_aux);
+   MDE : mde_coracao port map(ck, clr, SW0, SW1, pa, pv, s_Ta, s_Tv, q_aux);
    c_e : c_estados port map(q_aux, sa_aux, sv_aux, ta_aux, tv_aux);
    TA : C_Temp_A port map(ck, ta_aux, s_Ta);
    TV : C_Temp_V port map(ck, tv_aux, s_Tv);
