@@ -33,7 +33,6 @@ architecture logic of Coracao is
       );
    end component;
 
-   --signal or_A, or_V, s_Ta, s_Tv : std_logic;
    signal s_Ta, s_Tv, sa_aux, sv_aux, ta_aux, tv_aux : std_logic;
    signal q_aux : std_logic_vector(2 downto 0);
 
@@ -50,20 +49,6 @@ begin
    lsv <= sv_aux;
    lpa <= pa;
    lpv <= pv;
-
-   --or_A <= (not(SW0) or pa or s_Tv or clr);
-   --or_V <= (not(SW1) or pv or s_Ta);
-
-   --TA : Temp_A port map(ck, or_A, s_Ta);
-   --TV : Temp_V port map(ck, or_V, s_Tv);
-
-   --sa <= s_Ta;
-   --sv <= s_Tv;
-
-   --lsa <= s_Ta;
-   --lsv <= s_Tv;
-   --lpa <= pa;
-   --lpv <= pv;
 
 end logic;
 
