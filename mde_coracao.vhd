@@ -25,7 +25,7 @@ begin
 
         when EA =>                         
           if (SW0 = '1' and tc = '1')    then estado <= CA; 
-          elsif (SW0 = '0' and pa = '1') then estado <= RTA;
+          elsif (SW0 = '0' and pa = '1') then estado <= RTV;
           else                                estado <= EA;
           end if;
 
@@ -37,7 +37,7 @@ begin
 
         when EV =>                         
           if (SW1 = '1' and tb = '1')    then estado <= CV; 
-          elsif (SW1 = '0' and pv = '1') then estado <= RTV;
+          elsif (SW1 = '0' and pv = '1') then estado <= RTA;
           end if;
 
         when CV =>                         
